@@ -7,25 +7,25 @@
 <title><?php echo (isset($title) ? $title : 'Corso PHP - Esercitazione Helpdesk' ); ?></title>
 
 <!-- Bootstrap Core CSS -->
-<link href="/vs_ed1/libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="/f4_vs01/libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- MetisMenu CSS -->
-<link href="/vs_ed1/libs/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+<link href="/f4_vs01/libs/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
 
 <!-- Timeline CSS -->
-<link href="/vs_ed1/css/timeline.css" rel="stylesheet">
+<link href="/f4_vs01/css/timeline.css" rel="stylesheet">
 
 <!-- Custom CSS -->
-<link href="/vs_ed1/css/sb-admin-2.css" rel="stylesheet">
+<link href="/f4_vs01/css/sb-admin-2.css" rel="stylesheet">
 
 <!-- Helpdesk CSS -->
-<link href="/vs_ed1/css/style.css" rel="stylesheet">
+<link href="/f4_vs01/css/style.css" rel="stylesheet">
 
 <!-- Morris Charts CSS -->
-<link href="/vs_ed1/libs/morrisjs/morris.css" rel="stylesheet">
+<link href="/f4_vs01/libs/morrisjs/morris.css" rel="stylesheet">
 
 <!-- Custom Fonts -->
-<link href="/vs_ed1/libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="/f4_vs01/libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

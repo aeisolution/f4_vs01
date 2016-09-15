@@ -2,7 +2,7 @@
 define("MYSQLUSER", "root");
 define("MYSQLPASS", "");
 define("HOSTNAME", "localhost");
-define("MYSQLDB", "vs_ed");
+define("MYSQLDB", "vs_ed1");
 
 $connection = @new mysqli(HOSTNAME, MYSQLUSER, MYSQLPASS, MYSQLDB);
 
