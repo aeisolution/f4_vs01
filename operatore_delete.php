@@ -6,7 +6,7 @@ include_once('inc/dbconfig.php');
 if(isset($_GET['delete_id'])) {
   $id = $_GET['delete_id'];
   
-  $sql_query = "SELECT operatori.ID, operatori.Cognome, operatori.Nome, comuni.Nome AS Citta FROM operatori LEFT JOIN comuni ON operatori.comuneId = comuni.ID WHERE operatori.ID=$id";
+  $sql_query = "SELECT * FROM vOperatori WHERE ID=$id";
   if($result = $connection->query($sql_query)) {
     $row = $result->fetch_array();
   }
@@ -59,9 +59,12 @@ if(isset($_POST['btn-delete'])) {
         <input type="text" disabled class="form-control" name="nome" value="<?php echo $row['Nome']; ?>" placeholder="Nome">
     </div>
     <div class="form-group col-md-6">
-      
         <label>Città</label>
-        <input type="text" class="form-control" name="citta" value="<?php echo $row['Citta']; ?>" placeholder="Città">
+        <input type="text" class="form-control" name="citta" value="<?php echo $row['Comune']; ?>" placeholder="Città">
+    </div>
+    <div class="form-group col-md-6">
+        <label>Reparto</label>
+        <input type="text" class="form-control" name="reparto" value="<?php echo $row['Reparto']; ?>" placeholder="Città">
     </div>
     <div class="col-md-12">
       <a href="operatori.php" class="btn btn-default">Annulla</a> 

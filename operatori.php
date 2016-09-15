@@ -75,6 +75,7 @@ $result = $connection->query($sql_query);
                         <th>Cognome</th>
                         <th>Nome</th>
                         <th>Comune</th>
+                        <th>Reparto</th>
                         <th>Azioni</th>
                       </tr>
                     </thead>
@@ -89,6 +90,7 @@ $result = $connection->query($sql_query);
                             echo "<td>" . $row['Cognome'] . "</td>";
                             echo "<td>" . $row['Nome'] . "</td>";
                             echo "<td>" . $row['Comune'] . "</td>";
+                            echo "<td>" . $row['Reparto'] . "</td>";
                             echo "<td><a href='operatore_edit.php?edit_id=".$row['ID']."' class='btn btn-default btn-sm'>modifica</a> ";
                             echo "<a href='operatore_delete.php?delete_id=".$row['ID']."' class='btn btn-danger btn-sm'>cancella</a></td>";
                             echo "</tr>";
