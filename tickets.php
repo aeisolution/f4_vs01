@@ -85,7 +85,7 @@ $result = $connection->query($sql_query);
                             echo "<td>" . $row['Oggetto'] . "</td>";
                             echo "<td>" . $row['Categoria'] . "</td>";
                             echo "<td>" . $row['Stato'] . "</td>";
-                            echo "<td><a href='ticket_edit.php?edit_id=".$row['ID']."' class='btn btn-default btn-sm'>modifica</a> ";
+                            echo "<td><a href='ticket_view.php?view_id=".$row['ID']."' class='btn btn-default btn-sm'>visualizza</a> ";
                             echo "</tr>";
                          }
                         }
