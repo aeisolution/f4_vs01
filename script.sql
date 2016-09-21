@@ -22,3 +22,14 @@ from
 		)
 		left join operatori on((tickets.OperatoreId = operatori.ID))
 	)
+
+
+
+
+	-- VIEW vTickets_work
+	SELECT tickets_work.*, reparti.Nome AS Reparto, stati.Nome AS Stato,
+			CONCAT(operatori.Cognome, ' ', operatori.Nome) AS Operatore 
+	FROM tickets_work
+		LEFT JOIN operatori ON tickets_work.OperatoreId = operatori.ID
+		LEFT JOIN reparti ON tickets_work.RepartoId = reparti.ID
+		LEFT JOIN stati ON tickets_work.StatoId = stati.ID
