@@ -107,7 +107,7 @@ if(isset($_POST['btn-add']) && $id!=0) {
                 <div class="form-group col-md-12">
                     <label>descrizione</label>
                     <textarea class="form-control" readonly
-                              rows="5" value="<?php echo $row['Descrizione']; ?>"></textarea>
+                              rows="5"><?php echo $row['Descrizione']; ?></textarea>
                 </div>
               </form>
 
