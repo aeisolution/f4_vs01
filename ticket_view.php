@@ -125,7 +125,41 @@ if(isset($_POST['btn-add']) && $id!=0) {
 
 
             </div>
+            <div class="row">
+                <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th>Data</th>
+                        <th>Operatore</th>
+                        <th>Reparto</th>
+                        <th>Stato</th>
+                        <th>Note</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <?php
+                        // Estrazione dati tickets_work
+                        $sql_query = "SELECT * FROM vTickets_work WHERE ticketId=$id ORDER BY ID DESC";
+                        $result = $connection->query($sql_query);
 
+                        if($result->num_rows==0) {
+                          echo "<tr><td colspan='5'>nessun record trovato</td></tr>";
+                        } else {
+                          while($row = $result->fetch_array()) {
+                            echo "<tr>";
+                            echo "<td>" . $row['Data'] . "</td>";
+                            echo "<td>" . $row['Operatore'] . "</td>";
+                            echo "<td>" . $row['Reparto'] . "</td>";
+                            echo "<td>" . $row['Stato'] . "</td>";
+                            echo "<td>" . $row['Note'] . "</td>";
+                            echo "</tr>";
+                         }
+                        }
+                      ?>
+
+                    </tbody>
+                  </table>            
+            </div>
         </div>
         <!-- /#page-wrapper -->
 
