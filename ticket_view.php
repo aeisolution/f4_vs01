@@ -18,7 +18,7 @@ if(isset($_POST['btn-add']) && $id!=0) {
   if(!$connection->query($sql_cmd)) {
     echo "<script>alert('Errore di salvataggio record.');</script>";
   } else {
-    $sql_cmd = "UPDATE tickets SET statoId=$statoId, operatoreId=$operatoreId WHERE ID=$id";
+    $sql_cmd = "UPDATE tickets SET repartoId=$repartoId, statoId=$statoId, operatoreId=$operatoreId WHERE ID=$id";
     if(!$connection->query($sql_cmd)) {
         echo "<script>alert('Errore di aggiornamento ticket.');</script>";
     }

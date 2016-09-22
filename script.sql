@@ -1,4 +1,5 @@
-﻿select tickets.ID AS ID,
+﻿-- VIEW vTickets
+select tickets.ID AS ID,
 	tickets.ClienteId AS ClienteId,
 	tickets.Data AS Data,
 	tickets.Oggetto AS Oggetto,
@@ -6,6 +7,8 @@
 	tickets.DataClose AS DataClose,
 	tickets.CategoriaId AS CategoriaId,
 	tickets.StatoId AS StatoId,
+	tickets.RepartoId AS RepartoId,
+	reparti.Nome AS Reparto,
 	categorie.Nome AS Categoria,
 	stati.Nome AS Stato,
 	CONCAT(clienti.Cognome, ' ', clienti.Nome) AS Cliente,
@@ -21,7 +24,8 @@ from
 			left join clienti on((tickets.ClienteId = clienti.ID))
 		)
 		left join operatori on((tickets.OperatoreId = operatori.ID))
-	)
+		
+	) left join reparti on tickets.RepartoId = reparti.ID
 
 
 

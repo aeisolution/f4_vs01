@@ -28,6 +28,9 @@
                 <a href="tickets_open.php"><i class="fa fa-edit fa-fw"></i> Ticket Aperti</a>
             </li>
             <li>
+                <a href="tickets_reparto.php"><i class="fa fa-edit fa-fw"></i> Ticket Reparti</a>
+            </li>
+            <li>
                 <a href="tickets.php"><i class="fa fa-edit fa-fw"></i> Ticket</a>
             </li>
             <li>
