@@ -8,7 +8,7 @@ if(isset($_POST['btn-add'])) {
   $descrizione  = $_POST['descrizione'];
   $categoriaId = $_POST['categoriaId'];
 
-  $sql_cmd = "INSERT INTO tickets (clienteId, oggetto, descrizione, categoriaId, operatoreId, statoId) VALUES ($clienteId, '$oggetto', '$descrizione', $categoriaId, 0, 1) ";
+  $sql_cmd = "INSERT INTO tickets (clienteId, oggetto, descrizione, categoriaId, operatoreId, statoId, opRespId) VALUES ($clienteId, '$oggetto', '$descrizione', $categoriaId, 0, 1, $opSession) ";
   if($connection->query($sql_cmd)) {
     echo "<script>window.location.href='tickets.php?saved=true';</script>";
   } else {

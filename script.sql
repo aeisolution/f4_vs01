@@ -8,6 +8,8 @@ select tickets.ID AS ID,
 	tickets.CategoriaId AS CategoriaId,
 	tickets.StatoId AS StatoId,
 	tickets.RepartoId AS RepartoId,
+	tickets.OpRespId AS OpRespId,
+	CONCAT(opresponsabili.Cognome, ' ', opresponsabili.Nome) AS OpResp,
 	reparti.Nome AS Reparto,
 	categorie.Nome AS Categoria,
 	stati.Nome AS Stato,
@@ -26,6 +28,7 @@ from
 		left join operatori on((tickets.OperatoreId = operatori.ID))
 		
 	) left join reparti on tickets.RepartoId = reparti.ID
+	left join operatori as opresponsabili on((tickets.OpRespId = opresponsabili.ID))
 
 
 
